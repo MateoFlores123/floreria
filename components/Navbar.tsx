@@ -13,6 +13,8 @@ const NAV_LINKS = [
 const WA_LINK = `https://wa.me/51993708614?text=Hola,%20me%20gustar%C3%ADa%20consultar%20sobre%20sus%20servicios.`;
 
 export default function Navbar() {
+  const [mounted, setMounted] = useState(false);
+  
   const [scrolled, setScrolled]    = useState(false);
   const [activeSection, setActive] = useState("inicio");
   const [menuOpen, setMenuOpen]    = useState(false);
