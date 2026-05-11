@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌸 FloreriaShalon4 — Landing Page
 
-## Getting Started
+Landing page de lujo para **FloreriaShalon4**, construida con **Next.js 15**, **Tailwind CSS** y **TypeScript**. Estética negra y dorada con animaciones elegantes.
 
-First, run the development server:
+---
+
+## 🚀 Inicio rápido
+
+### 1. Instalar dependencias
+
+```bash
+npm install
+```
+
+### 2. Iniciar en modo desarrollo
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Construir para producción
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Estructura del proyecto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+floreria-shalon4/
+├── app/
+│   ├── layout.tsx        ← Root layout + fuentes + cursor
+│   ├── page.tsx          ← Página principal (ensambla todo)
+│   ├── globals.css       ← Variables CSS, animaciones, estilos globales
+│   └── not-found.tsx     ← Página 404
+├── components/
+│   ├── Navbar.tsx        ← Navegación fija con detección de sección activa
+│   ├── Hero.tsx          ← Sección principal con partículas y animaciones
+│   ├── Services.tsx      ← Catálogo de 6 servicios con cards interactivas
+│   ├── Gallery.tsx       ← Galería con filtros por categoría
+│   ├── About.tsx         ← Historia, estadísticas y testimonios
+│   ├── Contact.tsx       ← Contacto, horarios y WhatsApp CTA
+│   └── Footer.tsx        ← Pie de página elegante
+├── lib/
+│   └── data.ts           ← Todo el contenido centralizado (fácil de editar)
+├── next.config.ts
+├── tailwind.config.ts
+├── postcss.config.mjs
+└── tsconfig.json
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## ✏️ Personalización
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Todo el contenido está centralizado en **`lib/data.ts`**. Edita ahí:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `SERVICES` — Los 6 servicios que ofrece la florería
+- `GALLERY_ITEMS` — Fotos de la galería (cambia las URLs de Unsplash por tus propias fotos)
+- `TESTIMONIALS` — Testimonios de clientes
+- `CONTACT_INFO` — Teléfono, email, dirección y redes sociales
+
+### Cambiar fotos propias
+
+Reemplaza las URLs de `images.unsplash.com` en `lib/data.ts` y `components/Hero.tsx` por rutas locales en `/public/` o URLs de tu propio servidor.
+
+---
+
+## 🎨 Paleta de colores
+
+| Variable        | Valor       | Uso                          |
+|-----------------|-------------|------------------------------|
+| `--gold`        | `#d4920f`   | Color dorado principal       |
+| `--gold-light`  | `#f3db8b`   | Dorado claro / shimmer       |
+| `--obsidian`    | `#0a0a0a`   | Fondo negro principal        |
+| `--cream`       | `#f8f4ec`   | Texto principal claro        |
+
+---
+
+## 📦 Tecnologías
+
+- **Next.js 15** (App Router)
+- **React 19**
+- **Tailwind CSS 3**
+- **TypeScript 5**
+- **Fuentes:** Cormorant Garamond · Jost · Playfair Display (Google Fonts)
+
+---
+
+*Hecho con ✦ para FloreriaShalon4 — Arequipa, Perú*
